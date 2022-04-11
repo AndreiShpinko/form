@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>Only HTML/CSS Form</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main>
+      <section class="worksheet-section">
+        <div class="worksheet">
+
+          <input type="radio" name="worksheet-toggler" id="SignIn" checked />
+          <input type="radio" name="worksheet-toggler" id="JoinUs" />
+
+          <div class="worksheet__toggle">
+            <label for="SignIn"><h1>Sign in</h1></label>
+            <label for="JoinUs"><h1>Join us</h1></label>
+          </div>
+
+          <form action="#" class="form-signin">
+            <div class="username">
+              <label for="signin-name"><h2>Username</h2></label>
+              <input type="text" id="signin-name" required />
+            </div>
+            <div class="password">
+              <label for="signin-pass"><h2>Password</h2></label>
+              <input type="password" id="signin-pass" required />
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="signin-check" required />
+              <label for="signin-check">Keep me signed in</label>
+            </div>
+
+            <button type="submit" class="btn">Sign in</button>
+          </form>
+
+          <form action="#" class="form-joinus">
+            <div class="username">
+              <label for="joinus-name"><h2>Username:)</h2></label>
+              <input type="text" id="joinus-name" />
+            </div>
+            <div class="email">
+              <label for="joinus-email"><h2>Email:)</h2></label>
+              <input type="email" id="joinus-email"
+                pattern="[a-z]{n}@[a-z]{1}mail.com" title="Непохоже на почту"
+                required />
+            </div>
+            <div class="password">
+              <label for="joinus-pass"><h2>Password:)</h2></label>
+              <input type="password" id="joinus-pass" required />
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="joinus-check" required />
+              <label for="joinus-check">Keep me signed in</label>
+            </div>
+
+            <button type="submit" class="btn">Join us</button>
+          </form>
+
+          <div class="worksheet__links">
+            <a href="https://github.com/AndreiShpinko">Forgot password</a>
+            <a href="https://github.com/AndreiShpinko">Create an acount</a>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </body>
+</html>

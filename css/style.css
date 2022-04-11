@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.worksheet-section {
+  min-height: 100vh;
+  background-color: #e5eeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.worksheet {
+  margin: 5px;
+  max-width: 400px;
+  width: 100%;
+  padding: 50px 60px 60px;
+  -webkit-box-shadow: 0 30px 50px -15px #000;
+          box-shadow: 0 30px 50px -15px #000;
+  background: url("../img/background.png") 0 0/cover no-repeat, linear-gradient(58deg, #3023ae 0%, #7c48c3 53%, #c86dd7 100%);
+  color: #fff;
+}
+
+.worksheet input[type="radio"] {
+  display: none;
+}
+
+.worksheet input[type="radio"]#SignIn:checked ~ .worksheet__toggle [for="SignIn"]:after {
+  width: 90%;
+  background-color: #e66a64;
+}
+
+.worksheet input[type="radio"]#SignIn:checked ~ .form-joinus {
+  display: none;
+}
+
+.worksheet input[type="radio"]#JoinUs:checked ~ .worksheet__toggle [for="JoinUs"]:after {
+  width: 100%;
+  background-color: #e66a64;
+}
+
+.worksheet input[type="radio"]#JoinUs:checked ~ .form-signin {
+  display: none;
+}
+
+.worksheet__toggle {
+  margin: 0 -15px;
+}
+
+.worksheet__toggle label {
+  display: inline-block;
+  margin: 0 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.worksheet__toggle label:after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+  position: absolute;
+  bottom: -4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.worksheet__toggle label:hover:after {
+  background-color: #fff;
+}
+
+.worksheet__toggle label h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.worksheet .form-signin,
+.worksheet .form-joinus {
+  margin-top: 30px;
+}
+
+.worksheet .username,
+.worksheet .email,
+.worksheet .password {
+  margin-top: 15px;
+}
+
+.worksheet .username h2,
+.worksheet .email h2,
+.worksheet .password h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.worksheet .username input,
+.worksheet .email input,
+.worksheet .password input {
+  width: 100%;
+  margin-top: 8px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px;
+  font-size: 16px;
+}
+
+.worksheet .checkbox {
+  margin-top: 15px;
+}
+
+.worksheet .checkbox label {
+  position: relative;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.worksheet .checkbox label::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  left: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 1px solid #23ae92;
+  background-color: #fff;
+  border-radius: 1px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.worksheet .checkbox input {
+  display: none;
+}
+
+.worksheet .checkbox input:checked + label::before {
+  background: #23ae92 url(../img/done.png) center/10px no-repeat;
+}
+
+.worksheet .btn {
+  cursor: pointer;
+  margin: 40px auto 0;
+  width: 100%;
+  color: #fff;
+  background-color: #23ae92;
+  border: 1px solid #23ae92;
+  font-size: 18px;
+  border-radius: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 10px 0;
+}
+
+.worksheet .btn:hover {
+  background-color: rgba(35, 174, 146, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.worksheet__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 25px -5px 0;
+}
+
+.worksheet__links a {
+  font-weight: 300;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 5px;
+}
+
+.worksheet__links a:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 50px 30px 60px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
